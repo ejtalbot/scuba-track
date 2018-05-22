@@ -2,6 +2,9 @@ var Divesite = require('../models/divesite');
 var Animal = require('../models/animal');
 var async = require('async');
 
+const { body,validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');
+
 exports.animal_list = function(req, res, next) {
 
   Animal.find()

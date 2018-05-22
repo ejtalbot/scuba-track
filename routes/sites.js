@@ -10,8 +10,14 @@ router.get('/', divesite_controller.index);
 /*GET list of dive sites*/
 router.get('/divesites', divesite_controller.divesite_list);
 
+// GET request to create a new divesite 
+router.get('/divesites/create', divesite_controller.divesite_create_get);
+
 /*GET specific divesite*/
 router.get('/divesites/:id', divesite_controller.divesite_detail);
+
+// POST request for creating a new divesite
+//router.post('/divesites/create', divesite_controller.divesite_create_post);
 
 /*GET list animals*/
 router.get('/animals', animal_controller.animal_list);

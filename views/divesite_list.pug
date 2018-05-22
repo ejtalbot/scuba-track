@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	div(class='main-content')
+		section
+			h1= title
+			ul
+			each divesite in divesite_list
+				li
+					a(href=divesite.url) # divesite.name

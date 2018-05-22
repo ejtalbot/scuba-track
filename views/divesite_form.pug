@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	h1=title
+	
+	div#form-box
+		form(method='POST' action='')
+			div.form-group
+				label(for='name') Divesite name:
+				input#name.form-control(type='text', placeholder='Dive site name' name='name' required='true' value=(undefined===divesite ? '' : divesite.name) )
+			button.btn.btn-primary(type='submit') Submit
+		if errors 
+			ul
+				for error in errors
+					li!= error.msg
+	div#map
+		script(src='/javascripts/rendermap.js')
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAfO2aexjDZLbcNTE_QWQXeXx9uNjnONIg&callback=initMap' async, defer)

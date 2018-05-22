@@ -11,3 +11,18 @@
 .top-nav li a {
 	color: #ffe3c1;
 }
+#map {
+	height: 50%;
+	width:50%;
+	float:right;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	display: flex;
+}
